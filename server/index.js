@@ -6,6 +6,7 @@ const app = express();
 
 const userRoutes = require("./routes/User");
 const profileRoutes = require("./routes/Profile");
+const sessionRoutes = require("./routes/Session");
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -30,6 +31,8 @@ app.get("/", (req, res) => {
 // routes
 app.use("/api/v1/auth", userRoutes);
 app.use("/api/v1/profile", profileRoutes);
+app.use('/api/v1/session', sessionRoutes);
+
 
 
 app.listen(PORT, () => {

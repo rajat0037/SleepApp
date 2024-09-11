@@ -35,7 +35,13 @@ const userSchema = new mongoose.Schema(
         token : {
             type : String,
         },
+        // session : {
+        //     type : mongoose.Schema.Types.ObjectId,
+        //     required : true,
+        //     ref : "Session",
+        // },
+
     },
 );
 
-module.exports = mongoose.model("user", userSchema);
+module.exports = mongoose.model("User", userSchema);

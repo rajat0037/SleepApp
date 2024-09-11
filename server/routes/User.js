@@ -7,7 +7,11 @@ const{
     sendotp
 } = require("../controllers/Auth")
 
-router.post("/login", login)
+const {
+    auth
+} = require("../middlewares/auth");
+
+router.post("/login",auth, login)
 
 router.post("/signup", signup)
 

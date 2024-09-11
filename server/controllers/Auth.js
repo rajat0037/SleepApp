@@ -134,6 +134,7 @@ exports.login = async (req, res) => {
 
             // save token to user document in db
             user.token = token
+            console.log("token", token);
             user.password = undefined
 
             // set cookies for token and return sucess response
