@@ -1,6 +1,9 @@
 const Session = require("../models/Session");
 const User = require("../models/User");
 
+
+// session will track individual session like (meditation, exercise, audio etc)
+
 // create a new session
 exports.createSession = async (req,res) => {
     try {
