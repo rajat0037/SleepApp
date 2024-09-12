@@ -9,6 +9,7 @@ const profileRoutes = require("./routes/Profile");
 const sessionRoutes = require("./routes/Session");
 const feildRouters = require("./routes/Feilds");
 const activityRouters = require("./routes/Activity");
+const sourceOfStressRouters = require("./routes/SourceOfStress");
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -36,6 +37,7 @@ app.use("/api/v1/profile", profileRoutes);
 app.use('/api/v1/session', sessionRoutes);
 app.use('/api/v1/feilds', feildRouters);
 app.use('/api/v1/activity',activityRouters);
+app.use('/api/v1/sourceOfStress', sourceOfStressRouters);
 
 
 
