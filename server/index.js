@@ -1,6 +1,7 @@
 
 const express = require("express");
 const app = express();
+// const {insertActivites} = require('./utils/FunctionOfActivitiesToImproveMentalHealth');
 
 // const mongoose = require("mongoose");
 
@@ -11,6 +12,7 @@ const feildRouters = require("./routes/Feilds");
 const activityRouters = require("./routes/Activity");
 const sourceOfStressRouters = require("./routes/SourceOfStress");
 const feildsToImproveMentalHealth = require("./routes/feildsToImproveMentalHealth");
+const activitiesForImprovingMentalHealth = require("./routes/activitiesForImprovingMentalHealth");
 
 
 const dotenv = require("dotenv");
@@ -41,6 +43,7 @@ app.use('/api/v1/feilds', feildRouters);
 app.use('/api/v1/activity',activityRouters);
 app.use('/api/v1/sourceOfStress', sourceOfStressRouters);
 app.use('/api/v1/improveMentalHealth',feildsToImproveMentalHealth);
+app.use('/api/v1/activitiesForImprovingMentalHealth',activitiesForImprovingMentalHealth);
 
 
 
